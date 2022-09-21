@@ -4,6 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 
 const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl }) => {
   const router = useRouter()
+  console.log('CommonSEO', router.asPath)
   return (
     <Head>
       <title>{title}</title>
