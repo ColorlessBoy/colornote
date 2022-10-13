@@ -1,16 +1,16 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import MobileNavV2 from './MobileNavV2'
 
 const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
+      <div className="h-screen flex-col justify-between">
         <header className="flex items-center justify-between py-10">
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
@@ -24,14 +24,16 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <MobileNav />
+            <MobileNavV2 />
           </div>
           <div className="flex items-center text-base leading-5">
             <ThemeSwitch />
-            <div className="flow-left flex items-center justify-between">
+            <div className="flow-left ml-3 flex items-center justify-between ">
               <Link href="/" aria-label={siteMetadata.headerTitle}>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="block h-6 font-semibold">{siteMetadata.headerTitle}</div>
+                  <div className="block h-6 font-serif font-semibold underline">
+                    {siteMetadata.headerTitle}
+                  </div>
                 ) : (
                   siteMetadata.headerTitle
                 )}
