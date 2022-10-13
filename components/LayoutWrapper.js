@@ -12,22 +12,6 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
         <header className="flex items-center justify-between py-10">
-          <div>
-            <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between">
-                <div className="mr-3">
-                  <Logo />
-                </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
-              </div>
-            </Link>
-          </div>
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
@@ -40,8 +24,19 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <ThemeSwitch />
             <MobileNav />
+          </div>
+          <div className="flex items-center text-base leading-5">
+            <ThemeSwitch />
+            <div className="flow-left flex items-center justify-between">
+              <Link href="/" aria-label={siteMetadata.headerTitle}>
+                {typeof siteMetadata.headerTitle === 'string' ? (
+                  <div className="block h-6 font-semibold">{siteMetadata.headerTitle}</div>
+                ) : (
+                  siteMetadata.headerTitle
+                )}
+              </Link>
+            </div>
           </div>
         </header>
         <main className="mb-auto">{children}</main>
