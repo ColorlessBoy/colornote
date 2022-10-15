@@ -54,6 +54,10 @@ const securityHeaders = [
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
+  images: {
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
@@ -68,7 +72,7 @@ module.exports = withBundleAnalyzer({
   },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
-      test: /\.svg$/,
+      test: /\.svgz?$/,
       use: ['@svgr/webpack'],
     })
 
