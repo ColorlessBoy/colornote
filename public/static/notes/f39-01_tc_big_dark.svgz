@@ -95,7 +95,7 @@
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 4.679688 41.664063 L 1.222656 42.589844 L 4.679688 43.519531 L 4.679688 41.664063 "/>
 </g>
 </g>
-<g clip-path="url(#clip8)" clip-rule="nonzero">
+<g style=" stroke:none;fill:rgb(5%,5%,5%);" clip-path="url(#clip8)" clip-rule="nonzero">
 <g style="fill:rgb(100%,100%,100%);fill-opacity:1;">
   <use xlink:href="#glyph0-1" x="26.291" y="32.728"/>
 </g>
