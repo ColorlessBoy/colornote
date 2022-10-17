@@ -30,6 +30,8 @@ const Giscus = () => {
       lang,
     } = siteMetadata?.comment?.giscusConfig
 
+    console.log('giscus-repo', repo)
+
     const script = document.createElement('script')
     script.src = 'https://giscus.app/client.js'
     script.setAttribute('data-repo', repo)
