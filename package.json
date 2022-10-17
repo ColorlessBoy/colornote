@@ -37,6 +37,7 @@
     "rehype-slug": "^5.0.0",
     "remark-footnotes": "^4.0.1",
     "remark-gfm": "^3.0.1",
+    "remark-join-cjk-lines": "^1.0.9",
     "remark-math": "^5.1.1",
     "sharp": "^0.28.3",
     "tailwindcss": "^3.0.23",
