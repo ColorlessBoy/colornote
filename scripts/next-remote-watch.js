@@ -23,14 +23,22 @@ const defaultWatchEvent = 'change'
 program.storeOptionsAsProperties().version(pkg.version)
 program
   .option('-r, --root [dir]', 'root directory of your nextjs app')
-  .option('-s, --script [path]', 'path to the script you want to trigger on a watcher event', false)
+  .option(
+    '-s, --script [path]',
+    'path to the script you want to trigger on a watcher event',
+    false
+  )
   .option('-c, --command [cmd]', 'command to execute on a watcher event', false)
   .option(
     '-e, --event [name]',
     `name of event to watch, defaults to ${defaultWatchEvent}`,
     defaultWatchEvent
   )
-  .option('-p, --polling [name]', `use polling for the watcher, defaults to false`, false)
+  .option(
+    '-p, --polling [name]',
+    `use polling for the watcher, defaults to false`,
+    false
+  )
   .parse(process.argv)
 
 const shell = process.env.SHELL

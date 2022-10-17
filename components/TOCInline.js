@@ -34,7 +34,9 @@ const TOCInline = ({
 
   const filteredToc = toc.filter(
     (heading) =>
-      heading.depth >= fromHeading && heading.depth <= toHeading && !re.test(heading.value)
+      heading.depth >= fromHeading &&
+      heading.depth <= toHeading &&
+      !re.test(heading.value)
   )
 
   const tocList = (
@@ -51,7 +53,9 @@ const TOCInline = ({
     <>
       {asDisclosure ? (
         <details open>
-          <summary className="ml-6 pt-2 pb-2 text-xl font-bold">Table of Contents</summary>
+          <summary className="ml-6 pt-2 pb-2 text-xl font-bold">
+            Table of Contents
+          </summary>
           <div className="ml-6">{tocList}</div>
         </details>
       ) : (
