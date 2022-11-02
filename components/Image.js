@@ -10,7 +10,9 @@ const Image = ({ ...rest }) => {
     themecss = 'block dark:hidden'
   }
   return (
-    <div className={`stroke-gray-900 text-center dark:stroke-gray-100 ${themecss}`}>
+    <div
+      className={`overflow-auto stroke-gray-900 text-center dark:stroke-gray-100 ${themecss}`}
+    >
       <NextImage {...rest} />
     </div>
   )
